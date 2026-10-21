@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maillard, atelier de cuisine à Toulouse</title>
+<meta name="description" content="Maillard, atelier de cuisine à Toulouse : cours de cuisine, événements d'entreprise et cartes cadeaux. 5 rue Antoine Idrac, 31000 Toulouse. 05 61 47 71 23.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:,">
+<style>
+/* Habillage : modifier uniquement ces variables pour appliquer la charte CREA2F.
+   Polices : 2 familles maximum (D72). Pour une police hébergée sur notre serveur,
+   ajouter un @font-face ici et placer son nom en tête de la variable. */
+:root {
+  --font-titre: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-texte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --fond: #ffffff;        /* papier */
+  --texte: #2a211b;       /* encre */
+  --texte-doux: #5f5249;  /* texte secondaire */
+  --trait: #d9cfc2;       /* filets */
+  --accent: #8a4b1f;      /* bouton et liens */
+  --accent-texte: #ffffff;
+  --accent-survol: #6f3b17;
+  --cuisson-1: #e4c48f;   /* bandeau : blond */
+  --cuisson-2: #c08446;   /* doré */
+  --cuisson-3: #8a4b1f;   /* brun */
+  --focus: #1f5fbf;
+
+  --rayon: 2px;           /* angles du bouton : pas de pilule */
+  --largeur: 38rem;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 1.0625rem/1.6 var(--font-texte);
+  caret-color: var(--accent);
+}
+::selection { background: var(--accent); color: var(--accent-texte); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+a:hover { color: var(--accent-survol); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.page { max-width: var(--largeur); margin: 0 auto; padding: 0 1.25rem; }
+
+.accueil {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-block: clamp(3rem, 12vh, 7rem) 2rem;
+}
+h1 {
+  margin: 0;
+  font: 400 clamp(3.75rem, 17vw, 6rem)/.95 var(--font-titre);
+  letter-spacing: -.025em;
+}
+.lieu {
+  margin: .5rem 0 0;
+  font: italic 1.375rem/1.3 var(--font-titre);
+  color: var(--texte-doux);
+}
+.cuisson {
+  display: flex;
+  width: 7.5rem;
+  height: 6px;
+  margin: 2rem 0;
+}
+.cuisson span { flex: 1; }
+.cuisson span:nth-child(1) { background: var(--cuisson-1); }
+.cuisson span:nth-child(2) { background: var(--cuisson-2); }
+.cuisson span:nth-child(3) { background: var(--cuisson-3); }
+
+.presentation { margin: 0; font-size: 1.25rem; line-height: 1.5; max-width: 30ch; text-wrap: pretty; }
+.etat { margin: 1.25rem 0 0; color: var(--texte-doux); max-width: 36ch; }
+
+.appel {
+  align-self: flex-start;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .875rem 1.5rem;
+  background: var(--accent);
+  color: var(--accent-texte);
+  border-radius: var(--rayon);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color .15s ease-out;
+}
+.appel:hover { background: var(--accent-survol); color: var(--accent-texte); }
+
+.coordonnees {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: .375rem 1.5rem;
+  margin: 2.75rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--trait);
+}
+.coordonnees dt { color: var(--texte-doux); }
+.coordonnees dd { margin: 0; overflow-wrap: anywhere; }
+
+.lien-mentions { margin: auto 0 0; padding-top: 3rem; font-size: .9375rem; }
+
+.mentions {
+  padding-block: 3rem 4rem;
+  border-top: 1px solid var(--trait);
+  font-size: .9375rem;
+}
+.mentions h2 { margin: 0 0 1.5rem; font: 400 1.75rem/1.2 var(--font-titre); }
+.mentions h3 { margin: 2rem 0 .5rem; font-size: 1rem; font-weight: 600; }
+.mentions p { margin: 0 0 .25rem; max-width: 65ch; }
+
+@media (max-width: 22rem) {
+  .coordonnees { grid-template-columns: 1fr; }
+  .coordonnees dd + dt { margin-top: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="accueil" aria-labelledby="titre">
+    <h1 id="titre">Maillard</h1>
+    <p class="lieu">Atelier de cuisine à Toulouse</p>
+    <div class="cuisson" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <p class="presentation">Des cours de cuisine pour tous, des événements d’entreprise et des cartes cadeaux à offrir.</p>
+    <p class="etat">Notre nouveau site est en préparation. En attendant, l’équipe vous répond par téléphone.</p>
+
+    <a class="appel" href="tel:+33561477123">Appeler l’atelier</a>
+
+    <dl class="coordonnees">
+      <dt>Adresse</dt>
+      <dd>5 rue Antoine Idrac<br>31000 Toulouse</dd>
+      <dt>Téléphone</dt>
+      <dd>05 61 47 71 23</dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:contact@maillard-toulouse.fr">contact@maillard-toulouse.fr</a></dd>
+    </dl>
+
+    <p class="lien-mentions"><a href="#mentions">Mentions légales</a></p>
+  </section>
+
+  <section class="mentions" id="mentions" aria-labelledby="titre-mentions">
+    <h2 id="titre-mentions">Mentions légales</h2>
+
+    <h3>Éditeur du site</h3>
+    <p>SARL COC TOULOUSE, nom commercial Maillard</p>
+    <p>Capital social : 1 000 €</p>
+    <p>RCS Toulouse, SIREN 821 501 400</p>
+    <p>TVA intracommunautaire : FR89821501400</p>
+    <p>Siège social : 5 rue Antoine Idrac, 31000 Toulouse</p>
+    <p>Téléphone : 05 61 47 71 23</p>
+    <p>Email : <a href="mailto:contact@maillard-toulouse.fr">contact@maillard-toulouse.fr</a></p>
+
+    <h3>Directeur de la publication</h3>
+    <p>Arnaud Marty</p>
+
+    <h3>Hébergeur</h3>
+    <p>GitHub, Inc. (service GitHub Pages)</p>
+    <p>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</p>
+    <p>Téléphone : +1 877 448 4820</p>
+
+    <h3>Cookies et données personnelles</h3>
+    <p>Ce site ne dépose aucun cookie et n’utilise aucun outil de mesure d’audience. Il ne contient aucun formulaire et ne collecte aucune donnée personnelle.</p>
+  </section>
+</main>
+</body>
+</html>
